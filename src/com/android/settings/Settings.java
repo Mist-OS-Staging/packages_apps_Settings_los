@@ -538,4 +538,11 @@ public class Settings extends SettingsActivity {
     public static class ContentProtectionSettingsActivity extends SettingsActivity { /* empty */ }
     public static class MagnificationActivity extends SettingsActivity { /* empty */ }
     public static class FlashNotificationsActivity extends SettingsActivity { /* empty */ }
+<<<<<<< HEAD
+=======
+
+    public static class PrivateDnsSettingsActivity extends SettingsActivity { /* empty */ }
+    
+    public static class DevRunningServicesActivity extends SettingsActivity { /* empty */ }
+>>>>>>> 91daa3c88f5 (Settings: Allow to quickly open Running Services from meminfo view)
 }
