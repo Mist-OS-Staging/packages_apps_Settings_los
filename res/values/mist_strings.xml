@@ -427,4 +427,10 @@
     <string name="shake_gestures_screenshot">Take Screenshot</string>
     <string name="shake_gestures_intensity_title">Shake Gestures Intensity</string>
     <string name="shake_gestures_intensity_summary">Adjust the sensitivity of shake gestures</string>
+
+    <!-- Adaptive Playback -->
+    <string name="adaptive_playback_title">Adaptive playback</string>
+    <string name="adaptive_playback_summary">Pause media when volume is muted and resume it by increasing volume within the timeout</string>
+    <string name="adaptive_playback_intro_text">Automatically pauses media when the volume is muted and will resume automatically when volume is restored within the set time</string>
+    <string name="adaptive_playback_timeout_title">Playback timeout</string>
 </resources>
