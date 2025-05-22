@@ -85,6 +85,7 @@ public abstract class DashboardFragment extends SettingsPreferenceFragment
         "top_level_google"
     );
 
+    private static final List<String> SYSTEM_INFO_INJECTED_KEYS = Arrays.asList(
         "dashboard_tile_pref_com.google.android.gms.backup.component.BackupOrRestoreSettingsActivity"
     );
 

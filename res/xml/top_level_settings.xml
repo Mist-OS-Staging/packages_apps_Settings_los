@@ -27,7 +27,7 @@
         android:order="-160"
         android:title="@string/mist_dashboard_title"
         android:summary="@string/mist_dashboard_summary"
-        settings:highlightableMenuKey="@string/menu_key_mist"
+        settings:highlightableMenuKey="@string/menu_key_mistify"
         settings:controller="org.mist.settings.TopLevelMistSettingsPreferenceController"/>
 
     <com.android.settings.widget.HomepagePreference

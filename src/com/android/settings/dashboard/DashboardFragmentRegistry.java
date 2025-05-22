@@ -76,7 +76,7 @@ public class DashboardFragmentRegistry {
         PARENT_TO_CATEGORY_KEY_MAP.put(TopLevelSettings.class.getName(),
                 CategoryKey.CATEGORY_HOMEPAGE);
         PARENT_TO_CATEGORY_KEY_MAP.put(MistSettings.class.getName(),
-                CategoryKey.CATEGORY_MISTIFY);
+                CategoryKey.CATEGORY_MIST);
         PARENT_TO_CATEGORY_KEY_MAP.put(NetworkDashboardFragment.class.getName(),
                 CategoryKey.CATEGORY_NETWORK);
         PARENT_TO_CATEGORY_KEY_MAP.put(ConnectedDeviceDashboardFragment.class.getName(),
