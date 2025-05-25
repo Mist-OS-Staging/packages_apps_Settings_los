@@ -70,6 +70,7 @@ android_library {
         "res",
         "res-export", // for external usage
         "res-product",
+        "res-mist",
         "Mistify/res",
         "SettingsGoogle/res",
     ],
