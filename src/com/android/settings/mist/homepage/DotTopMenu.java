@@ -79,7 +79,7 @@ public class DotTopMenu extends Preference {
         mMist.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent = new Intent();
-                intent.setComponent(new ComponentName("com.android.settings", "com.android.settings.Settings$MistifySettingsActivity"));
+                intent.setComponent(new ComponentName("com.android.settings", "com.android.settings.Settings$MistSettingsActivity"));
                 context.startActivity(intent);
             }
         });

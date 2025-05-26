@@ -20,10 +20,10 @@
         <shape>
             <solid android:color="#FFFFFFFF" />
             <corners
-                android:topLeftRadius="@dimen/nad_merge_background_radius"
-                android:bottomLeftRadius="@dimen/nad_merge_background_radius"
-                android:topRightRadius="@dimen/nad_merge_background_radius"
-                android:bottomRightRadius="@dimen/nad_merge_background_radius" />
+                android:topLeftRadius="28dp"
+                android:bottomLeftRadius="28dp"
+                android:topRightRadius="28dp"
+                android:bottomRightRadius="28dp" />
         </shape>
     </item>
     <item id="@android:id/background">
@@ -36,10 +36,10 @@
                 android:endColor="@color/mist_color_secondary_accent"
                 android:angle="270"/>
             <corners
-                android:topLeftRadius="@dimen/nad_merge_background_radius"
-                android:bottomLeftRadius="@dimen/nad_merge_background_radius"
-                android:topRightRadius="@dimen/nad_merge_background_radius"
-                android:bottomRightRadius="@dimen/nad_round_background_radius" />
+                android:topLeftRadius="28dp"
+                android:bottomLeftRadius="28dp"
+                android:topRightRadius="28dp"
+                android:bottomRightRadius="28dp" />
             <stroke
                 android:width="@dimen/nad_stroke_width"
                 android:color="#1affffff" />

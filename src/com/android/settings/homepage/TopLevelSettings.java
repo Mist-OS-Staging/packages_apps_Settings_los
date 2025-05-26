@@ -241,8 +241,9 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         super.onCreatePreferences(savedInstanceState, rootKey);
+
         if (mDashboardStyle != DASHBOARD_STYLE_AOSP_LEGACY) return;
-        }
+
         int tintColor = Utils.getHomepageIconColor(getContext());
         iteratePreferences(preference -> {
             Drawable icon = preference.getIcon();

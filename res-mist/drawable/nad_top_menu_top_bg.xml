@@ -18,18 +18,14 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <shape
-            android:tint="@color/nad_color_background_tint_a30"
+            android:tint="?android:attr/colorAccent"
             android:shape="rectangle"
             android:tintMode="src_atop">
-            <gradient
-                android:startColor="@color/nad_color_gradient_start"
-                android:endColor="@color/nad_color_gradient_end"
-                android:angle="270"/>
             <corners
-                android:topLeftRadius="@dimen/nad_round_background_radius"
-                android:bottomLeftRadius="@dimen/nad_merge_background_radius"
-                android:topRightRadius="@dimen/nad_round_background_radius"
-                android:bottomRightRadius="@dimen/nad_merge_background_radius" />
+                android:topLeftRadius="28dp"
+                android:bottomLeftRadius="28dp"
+                android:topRightRadius="28dp"
+                android:bottomRightRadius="28dp" />
             <stroke
                 android:width="@dimen/nad_stroke_width"
                 android:color="#1affffff" />

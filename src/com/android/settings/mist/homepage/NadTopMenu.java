@@ -65,6 +65,16 @@ public class NadTopMenu extends Preference {
         return value;
     }
 
+    // device name
+    private static void setInfo(String prop, TextView textview) {
+        if (TextUtils.isEmpty(getSystemProperty(prop))) {
+            textview.setText("Unknown");
+        } else {
+            textview.setText(getSystemProperty(prop));
+        }
+
+    }
+
     @Override
     public void onBindViewHolder(PreferenceViewHolder holder) {
         super.onBindViewHolder(holder);
@@ -80,30 +90,6 @@ public class NadTopMenu extends Preference {
         // get homepage activity
         mHomePageActivity = ((SettingsApplication) context.getApplicationContext()).getHomeActivity();
 
-        // avatar
-        ImageView avatarImageView = (ImageView) holder.itemView.findViewById(
-                context.getResources().getIdentifier("id/account_avatar", null, context.getPackageName()));
-        if (mHomePageActivity != null) {
-            if (AvatarViewMixin.isAvatarSupported(mHomePageActivity)) {
-                avatarImageView.setVisibility(View.VISIBLE);
-                mAvatarViewMixin = new AvatarViewMixin(mHomePageActivity, avatarImageView);
-                mHomePageActivity.getLifecycle().addObserver(mAvatarViewMixin);
-            } else {
-                avatarImageView.setVisibility(View.GONE);
-            }
-        }
-
-        // About Phone
-        LinearLayout phoneLayout = holder.itemView.findViewById(context.getResources().
-                getIdentifier("id/about_device", null, context.getPackageName()));
-        phoneLayout.setClickable(true);
-        phoneLayout.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                Intent intent = new Intent();
-                intent.setComponent(new ComponentName("com.android.settings", "com.android.settings.Settings$AboutDeviceSettingsActivity"));
-                context.startActivity(intent);
-            }
-        });
 
         // Mistify Settings
         LinearLayout mistSettingsLayout = holder.itemView.findViewById(context.getResources().
@@ -112,19 +98,10 @@ public class NadTopMenu extends Preference {
         mistSettingsLayout.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent = new Intent();
-                intent.setComponent(new ComponentName("com.android.settings", "com.android.settings.Settings$MistifySettingsActivity"));
+                intent.setComponent(new ComponentName("com.android.settings", "com.android.settings.Settings$MistSettingsActivity"));
                 context.startActivity(intent);
             }
         });
-
-        // search
-        View toolbar =  holder.itemView.findViewById(context.getResources().
-                getIdentifier("id/search_action_bar", null, context.getPackageName()));
-        if (mHomePageActivity != null) {
-            FeatureFactory.getFeatureFactory().getSearchFeatureProvider()
-                    .initSearchToolbar(mHomePageActivity /* activity */, toolbar,
-                            SettingsEnums.SETTINGS_HOMEPAGE);
-        }
 
         // wifi
         LinearLayout wifiLayout = holder.itemView.findViewById(context.getResources().
@@ -199,6 +176,7 @@ public class NadTopMenu extends Preference {
                 context.startActivity(intent);
             }
         });
+
     }
 
     @Override

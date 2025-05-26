@@ -84,6 +84,10 @@ public abstract class DashboardFragment extends SettingsPreferenceFragment
     private static final String TAG = "DashboardFragment";
     private static final long TIMEOUT_MILLIS = 50L;
 
+    private static final List<String> PERSONALIZATION_INJECTED_KEYS = Arrays.asList(
+        "mist_device_parts_settings"
+    );
+
     private static final List<String> ACCOUNT_INJECTED_KEYS = Arrays.asList(
         "top_level_google"
     );
@@ -658,7 +662,7 @@ public abstract class DashboardFragment extends SettingsPreferenceFragment
                         && mDashboardTilePrefKeys.containsKey(tile.getGroupKey())) {
                     group = screen.findPreference(tile.getGroupKey());
                 } else if (PERSONALIZATION_INJECTED_KEYS.contains(key)) {
-                    group = screen.findPreference("top_level_personalize_category");
+                    group = screen.findPreference("top_level_mist_category");
                 } else if (GOOGLE_INJECTED_KEYS.contains(key)) {
                     group = screen.findPreference("top_level_account_category");
                 } else if (mDashboardStyle != DASHBOARD_STYLE_AOSP_LEGACY)  {

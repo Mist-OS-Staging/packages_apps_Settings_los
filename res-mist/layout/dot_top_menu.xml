@@ -115,7 +115,7 @@
                 android:id="@+id/settings_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/mistify_settings_title"
+                android:text="@string/mist_dashboard_title"
                 style="@style/MistPreferenceTitle"/>
 
             <TextView
@@ -123,7 +123,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/settings_title"
                 android:layout_alignStart="@id/settings_title"
-                android:text="@string/mistify_settings_summary"
+                android:text="@string/mist_dashboard_summary"
                 style="@style/MistPreferenceSummary"/>
         </RelativeLayout>
 
