@@ -2,7 +2,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/mist_card"
     android:id="@+id/dot_top_menu_preference_layout"
     android:layout_gravity="center"
     android:gravity="center"
@@ -20,11 +19,12 @@
         android:layout_height="wrap_content"
         android:minHeight="82dp"
         android:gravity="center_vertical"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
         android:layout_marginBottom="2dp"
         android:background="@drawable/dot_top_menu_about_background"
         android:clipToPadding="false"
         android:baselineAligned="false"
-        android:divider="3dp"
         android:orientation="horizontal">
 
         <LinearLayout
@@ -76,14 +76,6 @@
 
     </LinearLayout>
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="0.5dp"
-        android:layout_gravity="center"
-        app:cardCornerRadius="4dp"
-        app:cardElevation="6dp"
-        android:backgroundTint="#30000000" />
-
     <LinearLayout
         android:id="@+id/mist_settings"
         android:layout_width="match_parent"
@@ -94,6 +86,8 @@
         android:clipToPadding="false"
         android:baselineAligned="false"
         android:orientation="horizontal"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
         android:layout_marginTop="2dp">
 
         <LinearLayout
@@ -142,14 +136,6 @@
 
         <include layout="@layout/layout_chevron"/>
     </LinearLayout>
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="0.5dp"
-        android:layout_gravity="center"
-        app:cardCornerRadius="4dp"
-        app:cardElevation="6dp"
-        android:backgroundTint="#30000000" />
 
     <LinearLayout
         android:gravity="center"
@@ -238,4 +224,5 @@
                     style="@style/MistPreferenceSmallSummary"/>
             </RelativeLayout>
         </LinearLayout>
+</LinearLayout>
 </LinearLayout>

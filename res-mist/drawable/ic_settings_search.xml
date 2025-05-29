@@ -34,13 +34,13 @@
                     android:startY="1"
                     android:type="linear">
                     <item
-                        android:color="@color/alpha_color_primary_accent"
+                        android:color="@color/mist_color_primary_accent"
                         android:offset="0.0" />
                     <item
-                        android:color="@color/alpha_color_primary_accent_a30"
+                        android:color="@color/mist_color_primary_accent_a30"
                         android:offset="0.75" />
                     <item
-                        android:color="@color/alpha_color_secondary_accent"
+                        android:color="@color/mist_color_secondary_accent"
                         android:offset="1.0" />
                 </gradient>
             </aapt:attr>

@@ -24,8 +24,8 @@ import static android.os.UserManager.USER_TYPE_PROFILE_PRIVATE;
 import static android.text.format.DateUtils.FORMAT_ABBREV_MONTH;
 import static android.text.format.DateUtils.FORMAT_SHOW_DATE;
 
-import static com.android.settings.alpha.AlphaConstants.DASHBOARD_STYLE_AOSP_REVAMPED;
-import static com.android.settings.alpha.AlphaConstants.DASHBOARD_STYLE_DOT;
+import static com.android.settings.mist.MistConstants.DASHBOARD_STYLE_AOSP_REVAMPED;
+import static com.android.settings.mist.MistConstants.DASHBOARD_STYLE_DOT;
 
 import static com.android.settings.password.ConfirmDeviceCredentialActivity.BIOMETRIC_PROMPT_AUTHENTICATORS;
 import static com.android.settings.password.ConfirmDeviceCredentialActivity.BIOMETRIC_PROMPT_HIDE_BACKGROUND;

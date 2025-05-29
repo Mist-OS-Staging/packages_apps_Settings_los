@@ -57,7 +57,7 @@
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 
-    <com.google.android.material.appbar.AppBarLayout
+    <!--<com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -70,12 +70,10 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:paddingTop="8dp"
-            android:paddingBottom="16dp"
+            android:paddingBottom="24dp"
             android:paddingStart="?android:attr/listPreferredItemPaddingStart"
             android:paddingEnd="?android:attr/listPreferredItemPaddingEnd">
 
-            <include layout="@layout/search_bar_unified_version"/>
-
         </LinearLayout>
-    </com.google.android.material.appbar.AppBarLayout>
+    </com.google.android.material.appbar.AppBarLayout>-->
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

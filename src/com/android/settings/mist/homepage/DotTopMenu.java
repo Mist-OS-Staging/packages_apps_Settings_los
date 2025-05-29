@@ -42,6 +42,10 @@ public class DotTopMenu extends Preference {
     private long lastTouchTime = 0;
     private long currentTouchTime = 0;
 
+    private SettingsHomepageActivity mHomePageActivity;
+    private BroadcastReceiver mReceiver;
+
+
     public DotTopMenu(Context context, AttributeSet attrs) {
         super(context, attrs);
         setLayoutResource(context.getResources().
@@ -181,7 +185,7 @@ public class DotTopMenu extends Preference {
         mMist.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent = new Intent();
-                intent.setComponent(new ComponentName("com.android.settings", "org.mist.settings.Settings$MistifySettingsActivity"));
+                intent.setComponent(new ComponentName("com.android.settings", "org.mist.settings.Settings$MistSettingsActivity"));
                 context.startActivity(intent);
             }
         });
