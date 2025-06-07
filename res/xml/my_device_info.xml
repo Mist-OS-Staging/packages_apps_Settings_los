@@ -34,6 +34,22 @@
         android:order="-998"
         android:selectable="false" />
 
+    <!--Device Header -->
+    <com.android.settingslib.widget.LayoutPreference
+        android:key="mist_top_header"
+        android:order="-997"
+        android:layout="@layout/top_header_mist"
+        android:selectable="false"
+        settings:controller="com.android.settings.deviceinfo.firmwareversion.controller.FirmwareHeaderPreferenceController"
+        settings:isPreferenceVisible="true"/>
+
+    <com.android.settingslib.widget.LayoutPreference
+        android:key="my_device_hw_header"
+        android:order="-996"
+        android:layout="@layout/mist_device_info_hw"
+        android:selectable="false"
+        settings:isPreferenceVisible="true"/>
+
     <PreferenceCategory
         android:key="basic_info_category"
         android:selectable="false"

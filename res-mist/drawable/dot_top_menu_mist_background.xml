@@ -14,7 +14,7 @@
     <item id="@android:id/background">
         <shape>
             <solid
-                android:color="@color/mist_color_secondary_accent" />
+                android:color="@color/mist_color_primary_accent_a30" />
             <corners
                 android:topLeftRadius="@dimen/dot_merge_background_radius"
                 android:bottomLeftRadius="@dimen/dot_merge_background_radius"

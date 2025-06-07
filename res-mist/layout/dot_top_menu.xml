@@ -60,7 +60,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/about_settings"
-                style="@style/MistPreferenceTitle"/>
+                style="@style/MistHeadPreferenceTitle"/>
 
             <TextView
                 android:id="@+id/device_name"
@@ -69,7 +69,7 @@
                 android:layout_below="@id/about_title"
                 android:layout_alignStart="@id/about_title"
                 android:text="@string/summary_placeholder"
-                style="@style/MistPreferenceSummary"/>
+                style="@style/MistHeadPreferenceSummary"/>
         </RelativeLayout>
 
         <include layout="@layout/layout_chevron"/>
@@ -105,7 +105,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:scaleType="centerInside"
-                android:src="@drawable/ic_settings_about_device_filled"/>
+                android:src="@drawable/ic_settings_mistify"/>
 
         </LinearLayout>
 
@@ -123,7 +123,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/mist_dashboard_title"
-                style="@style/MistPreferenceTitle"/>
+                style="@style/MistHeadPreferenceTitle"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -131,7 +131,7 @@
                 android:layout_below="@id/settings_title"
                 android:layout_alignStart="@id/settings_title"
                 android:text="@string/mist_dashboard_summary"
-                style="@style/MistPreferenceSummary"/>
+                style="@style/MistHeadPreferenceSummary"/>
         </RelativeLayout>
 
         <include layout="@layout/layout_chevron"/>

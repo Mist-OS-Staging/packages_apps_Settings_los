@@ -89,4 +89,41 @@
         <item name="android:paddingBottom">2dp</item>
     </style>
 
+    <style name="op_control_text_style_base">
+        <item name="android:breakStrategy">simple</item>
+    </style>
+    <style name="op_control_text_style_h6" parent="@style/op_control_text_style_base">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:fontFamily">@*android:string/config_headlineFontFamilyMedium</item>
+        <item name="android:elevation">0dp</item>
+    </style>
+
+    <style name="MistHeadPreferenceTitle">
+        <item name="android:textAppearance">?android:attr/textAppearanceListItem</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:layout_gravity">start</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceListItem</item>
+        <item name="android:hyphenationFrequency">normalFast</item>
+        <item name="android:lineBreakWordStyle">phrase</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:cursorVisible">false</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <!-- Dashboard preference summary -->
+    <style name="MistHeadPreferenceSummary" parent="@style/PreferenceSummaryTextStyle">
+        <item name="android:layout_below">@android:id/title</item>
+        <item name="android:layout_alignStart">@android:id/title</item>
+        <item name="android:layout_gravity">start</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:hyphenationFrequency">normalFast</item>
+        <item name="android:lineBreakWordStyle">phrase</item>
+        <item name="android:cursorVisible">false</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
 </resources>

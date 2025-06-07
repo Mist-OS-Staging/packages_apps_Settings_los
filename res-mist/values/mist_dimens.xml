@@ -39,4 +39,7 @@
     <dimen name="nad_merge_background_radius">3dp</dimen>
     <dimen name="nad_preference_height">76dp</dimen>
     <dimen name="nad_stroke_width">1dp</dimen>
+
+    <dimen name="card_margin_start_aqua">20dp</dimen>
+    <dimen name="card_margin_end_aqua">20dp</dimen>
 </resources>

@@ -542,4 +542,6 @@
 
     <!-- Connected displays -->
     <dimen name="display_topology_pane_margin">24dp</dimen>
+
+    <dimen name="card_radius">20dp</dimen>
 </resources>
