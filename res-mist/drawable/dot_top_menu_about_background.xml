@@ -29,7 +29,7 @@
     </item>
     <item android:id="@android:id/background">
         <shape android:shape="rectangle">
-            <solid android:color="#F2EAE3" />
+            <solid android:color="@color/mist_color_secondary_accent" />
             <corners
                 android:topLeftRadius="@dimen/dot_round_background_radius"
                 android:bottomLeftRadius="@dimen/dot_merge_background_radius"
