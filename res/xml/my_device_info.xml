@@ -44,19 +44,31 @@
         android:selectable="false"
         settings:isPreferenceVisible="true"/>
 
-    <PreferenceCategory
-        android:key="basic_info_category"
-        android:selectable="false"
-        android:title="@string/my_device_info_basic_info_category_title">
+    <!-- MistOS Maintainer -->
+    <Preference
+        android:key="MistOS_maintainer"
+        android:title="@string/MistOS_maintainer"
+        android:summary="@string/summary_placeholder"
+        android:order="-995"
+        android:icon="@drawable/ic_mist_team"
+        settings:layout="@layout/top_level_preference_solo_card_ayan"
+        settings:enableCopying="true"
+        settings:controller="com.android.settings.deviceinfo.firmwareversion.MistOSMaintainerPreferenceController"/>
 
         <!-- Device name -->
         <com.android.settings.widget.ValidatedEditTextPreference
             android:key="device_name"
-            android:order="1"
+            android:order="-994"
+            android:icon="@drawable/ic_mist_device"
             android:title="@string/my_device_info_device_name_preference_title"
             android:summary="@string/summary_placeholder"
             settings:controller="com.android.settings.deviceinfo.DeviceNamePreferenceController"
             settings:enableCopying="true"/>
+
+    <PreferenceCategory
+        android:key="basic_info_category"
+        android:selectable="false"
+        android:title="@string/my_device_info_basic_info_category_title">
 
         <!-- Account name -->
         <Preference
