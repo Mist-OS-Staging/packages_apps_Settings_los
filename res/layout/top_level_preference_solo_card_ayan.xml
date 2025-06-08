@@ -1,0 +1,71 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/top_mist_background"
+    android:gravity="center_vertical"
+    android:layout_marginTop="3dp"
+    android:layout_marginBottom="3dp"
+    android:layout_marginStart="@dimen/card_margin_start_aqua"
+    android:layout_marginEnd="@dimen/card_margin_end_aqua" >
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="fill_parent"
+        android:background="@drawable/top_mist_background"
+        android:layout_height="70dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            app:cardBackgroundColor="#00000000"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:id="@+id/icon_frame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp">
+
+                <com.mist.utils.DynamicIconPreferenceView
+                    android:id="@android:id/icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1.0"
+            android:layout_marginEnd="10dp">
+            <TextView
+                android:ellipsize="marquee"
+                android:id="@android:id/title"
+                android:fadingEdge="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="#FFFFFF"
+                style="@style/op_control_text_style_h6" />
+
+            <TextView
+                android:id="@android:id/summary"
+                style="@style/op_control_text_style_body1"
+                android:layout_width="@dimen/top_level_preference_summary_max_width"
+                android:layout_height="wrap_content"
+                android:layout_below="@android:id/title"
+                android:layout_alignStart="@android:id/title"
+                android:layout_alignLeft="@android:id/title"
+                android:layout_marginTop="2.0dip"
+                android:maxLines="4"
+                android:textColor="#FFFFFF" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
