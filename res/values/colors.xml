@@ -227,4 +227,5 @@
     <color name="display_topology_background_color">@color/settingslib_color_grey100</color>
 
     <color name="mist_pref_color">@android:color/system_neutral1_10</color>
+
 </resources>

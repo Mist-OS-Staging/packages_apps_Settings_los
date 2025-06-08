@@ -81,29 +81,29 @@ public class DotTopMenu extends Preference {
         // get homepage activity
         mHomePageActivity = ((SettingsApplication) context.getApplicationContext()).getHomeActivity();
 
-        LinearLayout mAbout = holder.itemView.findViewById(context.getResources().
-                getIdentifier("id/about", null, context.getPackageName()));
-
-        String mDeviceName = Settings.Global.getString(context.getContentResolver(),
-                Settings.Global.DEVICE_NAME);
-        if (mDeviceName == null) {
-            mDeviceName = Build.MODEL;
-        }
-
-        TextView deviceName = holder.itemView.findViewById(context.getResources().
-                getIdentifier("id/device_name", null, context.getPackageName()));
-        if (deviceName != null) {
-            deviceName.setText(mDeviceName);
-        }
-
-        mAbout.setClickable(true);
-        mAbout.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setComponent(new ComponentName("com.android.settings", "com.android.settings.Settings$MyDeviceInfoActivity"));
-                context.startActivity(intent);
-            }
-        });
+//        LinearLayout mAbout = holder.itemView.findViewById(context.getResources().
+//                getIdentifier("id/about", null, context.getPackageName()));
+//
+//        String mDeviceName = Settings.Global.getString(context.getContentResolver(),
+//                Settings.Global.DEVICE_NAME);
+//        if (mDeviceName == null) {
+//            mDeviceName = Build.MODEL;
+//        }
+//
+//        TextView deviceName = holder.itemView.findViewById(context.getResources().
+//                getIdentifier("id/device_name", null, context.getPackageName()));
+//        if (deviceName != null) {
+//            deviceName.setText(mDeviceName);
+//        }
+//
+//        mAbout.setClickable(true);
+//        mAbout.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                Intent intent = new Intent();
+//                intent.setComponent(new ComponentName("com.android.settings", "com.android.settings.Settings$MyDeviceInfoActivity"));
+//                context.startActivity(intent);
+//            }
+//        });
 
         // wifi
         LinearLayout wifiLayout = holder.itemView.findViewById(context.getResources().

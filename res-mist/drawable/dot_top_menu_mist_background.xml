@@ -5,9 +5,9 @@
         <shape>
             <solid android:color="#FFFFFFFF" />
             <corners
-                android:topLeftRadius="@dimen/dot_merge_background_radius"
+                android:topLeftRadius="28dp"
                 android:bottomLeftRadius="@dimen/dot_merge_background_radius"
-                android:topRightRadius="@dimen/dot_merge_background_radius"
+                android:topRightRadius="28dp"
                 android:bottomRightRadius="@dimen/dot_merge_background_radius" />
         </shape>
     </item>
@@ -16,9 +16,9 @@
             <solid
                 android:color="@color/mist_color_primary_accent_a30" />
             <corners
-                android:topLeftRadius="@dimen/dot_merge_background_radius"
+                android:topLeftRadius="28dp"
                 android:bottomLeftRadius="@dimen/dot_merge_background_radius"
-                android:topRightRadius="@dimen/dot_merge_background_radius"
+                android:topRightRadius="28dp"
                 android:bottomRightRadius="@dimen/dot_merge_background_radius" />
             <stroke
                 android:width="@dimen/nad_stroke_width"

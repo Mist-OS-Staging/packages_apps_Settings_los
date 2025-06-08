@@ -25,6 +25,15 @@
         android:key="top_level_mist_category"
         android:order="-140">
 
+    <Preference
+        android:key="top_level_about_device"
+        android:order="-170"
+        android:title="@string/mist_dashboard_device"
+        android:summary="@string/summary_placeholder"
+        settings:layout="@layout/mist_dashboard_preference_phone"
+        android:fragment="com.android.settings.deviceinfo.aboutphone.MyDeviceInfoFragment"
+        settings:controller="com.android.settings.deviceinfo.aboutphone.TopLevelAboutDevicePreferenceController"/>
+
         <com.android.settings.mist.homepage.DotTopMenu
             android:key="dot_top_menu_key"
             android:order="-160"/>

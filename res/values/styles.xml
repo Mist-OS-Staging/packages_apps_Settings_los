@@ -1049,4 +1049,5 @@
         <item name="android:fontFamily">@*android:string/config_regularFontFamily</item>
         <item name="android:textAppearance">?android:attr/textAppearanceListItemSmall</item>
     </style>
+
 </resources>
