@@ -86,12 +86,10 @@ public abstract class DashboardFragment extends SettingsPreferenceFragment
 
     private static final List<String> GOOGLE_INJECTED_KEYS = Arrays.asList(
         "top_level_google",
+        "top_level_wellbeing",
         "dashboard_tile_pref_com.google.android.gms.backup.component.BackupOrRestoreSettingsActivity"
     );
 
-    private static final List<String> SECURITY_PRIVACY_INJECTED_KEYS = Arrays.asList(
-        "top_level_wellbeing"
-    );
 
     private static final ArrayMap<String, Integer> KEY_ORDER = new ArrayMap<>();
     static {
@@ -99,7 +97,7 @@ public abstract class DashboardFragment extends SettingsPreferenceFragment
         KEY_ORDER.put("dashboard_tile_pref_com.google.android.gms.backup.component.BackupOrRestoreSettingsActivity", -45);
         // We have "Battery" with order "-30" below
         KEY_ORDER.put("top_level_google", -20);
-        KEY_ORDER.put("dashboard_tile_pref_com.google.android.gms.backup.component.BackupOrRestoreSettingsActivity", -10);
+        KEY_ORDER.put("top_level_wellbeing", -10);
     }
 
     @VisibleForTesting
