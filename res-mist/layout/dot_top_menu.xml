@@ -7,11 +7,33 @@
     android:gravity="center"
     android:layout_marginLeft="2dp"
     android:layout_marginRight="2dp"
-    android:layout_marginTop="10dp"
+    android:layout_marginTop="2dp"
     android:layout_marginBottom="6dp"
     android:layout_marginStart="?android:attr/listPreferredItemPaddingEnd"
     android:layout_marginEnd="?android:attr/listPreferredItemPaddingEnd"
     android:orientation="vertical">
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:id="@+id/search_bar"
+        android:background="@drawable/mist_search_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_weight="1.1">
+
+    <Toolbar
+        android:id="@+id/search_action_bar"
+        android:background="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingEnd="@dimen/search_bar_padding_end"
+        android:touchscreenBlocksFocus="false"
+        android:navigationIcon="@drawable/settings_search"
+        android:contentInsetStartWithNavigation="@dimen/search_bar_content_inset"/>
+</LinearLayout>
+
 
     <LinearLayout
         android:id="@+id/mist_settings"

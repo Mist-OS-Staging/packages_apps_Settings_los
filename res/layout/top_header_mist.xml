@@ -40,38 +40,38 @@
             android:layout_marginBottom="8dp">
             <TextView
                 android:id="@+id/device_name_tittle"
-                android:layout_width="110dp"
+                android:layout_width="115dp"
                 android:layout_height="20dp"
                 android:layout_gravity=""
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="20dp"
                 android:gravity="start"
                 android:text="@string/top_header_device_name"
-                android:textColor="@color/op_control_text_color_primary"
+                android:textColor="#FFFFFF"
                 android:textSize="15sp"
                 android:textStyle="bold" />
             <TextView
                 android:id="@+id/device_summery"
-                android:layout_width="110dp"
+                android:layout_width="115dp"
                 android:layout_height="20dp"
                 android:layout_gravity=""
                 android:layout_marginTop="35dp"
                 android:gravity="start"
                 android:layout_marginBottom="20dp"
-                android:textColor="@color/op_control_text_color_secondary"
-                android:textSize="13sp"
-                android:textStyle="bold" />
+                android:textColor="#FFFFFF"
+                android:textSize="13.5sp"
+                style="@style/mist_control_text_style_body1" />
             <TextView
                 android:id="@+id/device_codename"
-                android:layout_width="110dp"
+                android:layout_width="115dp"
                 android:layout_height="20dp"
                 android:layout_gravity=""
                 android:layout_marginTop="60dp"
                 android:gravity="start"
                 android:layout_marginBottom="20dp"
-                android:textColor="@color/op_control_text_color_secondary"
-                android:textSize="13sp"
-                android:textStyle="bold" />
+                android:textColor="#FFFFFF"
+                android:textSize="13.5sp"
+                style="@style/mist_control_text_style_body1" />
         </androidx.cardview.widget.CardView>
         </FrameLayout>
         <androidx.cardview.widget.CardView

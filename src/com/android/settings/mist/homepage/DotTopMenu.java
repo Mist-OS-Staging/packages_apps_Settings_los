@@ -105,6 +105,15 @@ public class DotTopMenu extends Preference {
 //            }
 //        });
 
+        // search
+        View toolbar =  holder.itemView.findViewById(context.getResources().
+                getIdentifier("id/search_action_bar", null, context.getPackageName()));
+        if (mHomePageActivity != null) {
+            FeatureFactory.getFeatureFactory().getSearchFeatureProvider()
+                    .initSearchToolbar(mHomePageActivity /* activity */, toolbar,
+                            SettingsEnums.SETTINGS_HOMEPAGE);
+        }
+
         // wifi
         LinearLayout wifiLayout = holder.itemView.findViewById(context.getResources().
                 getIdentifier("id/wifi", null, context.getPackageName()));
