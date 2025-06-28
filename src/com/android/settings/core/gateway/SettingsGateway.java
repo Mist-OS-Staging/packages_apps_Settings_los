@@ -221,7 +221,6 @@ import com.android.settings.wifi.savedaccesspoints2.SavedAccessPointsWifiSetting
 import com.android.settings.wifi.tether.WifiTetherSettings;
 
 import org.mist.settings.MistSettings;
-import org.mist.settings.fragments.miscellaneous.SmartPixels;
 
 public class SettingsGateway {
 
@@ -431,7 +430,6 @@ public class SettingsGateway {
             FlashNotificationsPreferenceFragment.class.getName(),
             PrivateDnsSettings.class.getName(),
             VolumeStepsSettings.class.getName(),
-            SmartPixels.class.getName(),
             RunningServices.class.getName(),
     };
 
@@ -482,7 +480,6 @@ public class SettingsGateway {
             Settings.NavigationModeSettingsActivity.class.getName(),
             // Others (Mist Additions)
             Settings.PrivateDnsSettingsActivity.class.getName(),
-            Settings.SmartPixelsActivity.class.getName(),
             Settings.DevRunningServicesActivity.class.getName(),
     };
 }
