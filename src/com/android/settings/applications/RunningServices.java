@@ -24,12 +24,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.fragment.app.Fragment;
+
 import com.android.settings.R;
-import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.development.DeveloperOptionAwareMixin;
 import com.android.settings.widget.LoadingViewController;
 
-public class RunningServices extends SettingsPreferenceFragment implements
+public class RunningServices extends Fragment implements
         DeveloperOptionAwareMixin {
 
     private static final int SHOW_RUNNING_SERVICES = 1;
@@ -118,11 +119,6 @@ public class RunningServices extends SettingsPreferenceFragment implements
         } else {
             getActivity().setTitle(R.string.background_processes_settings_title);
         }
-    }
-
-    @Override
-    public int getMetricsCategory() {
-        return SettingsEnums.RUNNING_SERVICES;
     }
 
     private final Runnable mRunningProcessesAvail = new Runnable() {
