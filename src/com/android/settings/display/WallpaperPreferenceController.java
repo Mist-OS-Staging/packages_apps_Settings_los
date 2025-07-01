@@ -32,7 +32,7 @@ import com.android.settings.core.BasePreferenceController;
 import com.android.settingslib.RestrictedLockUtilsInternal;
 import com.android.settingslib.RestrictedPreference;
 
-import com.android.internal.util.evolution.Utils;
+import com.android.internal.util.mist.Utils;
 
 import java.util.List;
 

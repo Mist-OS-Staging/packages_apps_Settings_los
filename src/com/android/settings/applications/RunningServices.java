@@ -27,11 +27,10 @@ import android.view.ViewGroup;
 import androidx.fragment.app.Fragment;
 
 import com.android.settings.R;
-import com.android.settings.development.DeveloperOptionAwareMixin;
+import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.widget.LoadingViewController;
 
-public class RunningServices extends Fragment implements
-        DeveloperOptionAwareMixin {
+public class RunningServices extends SettingsPreferenceFragment {
 
     private static final int SHOW_RUNNING_SERVICES = 1;
     private static final int SHOW_BACKGROUND_PROCESSES = 2;
@@ -119,6 +118,11 @@ public class RunningServices extends Fragment implements
         } else {
             getActivity().setTitle(R.string.background_processes_settings_title);
         }
+    }
+
+    @Override
+    public int getMetricsCategory() {
+        return SettingsEnums.RUNNING_SERVICES;
     }
 
     private final Runnable mRunningProcessesAvail = new Runnable() {
