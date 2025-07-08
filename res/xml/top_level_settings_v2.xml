@@ -28,7 +28,7 @@
 
     <PreferenceCategory
         android:order="-140"
-        android:key="top_level_mistify_category"
+        android:key="top_level_mist_category"
         android:layout="@layout/settingslib_preference_category_no_title">
 
         <com.android.settings.widget.HomepagePreference
