@@ -28,4 +28,6 @@
 
     <!-- Maintainer string - default -->
     <string name="maintainer_string">Unknown</string>
+
+    <string name="firmware_category_title">Firmware info</string>
 </resources>
