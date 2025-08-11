@@ -433,4 +433,10 @@
     <string name="adaptive_playback_summary">Pause media when volume is muted and resume it by increasing volume within the timeout</string>
     <string name="adaptive_playback_intro_text">Automatically pauses media when the volume is muted and will resume automatically when volume is restored within the set time</string>
     <string name="adaptive_playback_timeout_title">Playback timeout</string>
+
+    <!-- Wake on charge -->
+    <string name="wake_on_charge_title">Wake on charge</string>
+    <string name="wake_on_charge_disabled">@string/disabled</string>
+    <string name="wake_on_charge_enabled">Fully wake</string>
+    <string name="wake_on_charge_pulse_doze">Pulse doze</string>
 </resources>

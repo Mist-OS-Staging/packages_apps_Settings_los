@@ -280,6 +280,15 @@
             android:defaultValue="false"
             settings:requiresFeature="lineagehardware:FEATURE_HIGH_TOUCH_POLLING_RATE" />
 
+        <org.mist.settings.preferences.SecureSettingListPreference
+            android:key="wake_on_charge"
+            android:title="@string/wake_on_charge_title"
+            android:summary="%s"
+            android:dialogTitle="@string/wake_on_charge_title"
+            android:entries="@array/wake_on_charge_entries"
+            android:entryValues="@array/wake_on_charge_values"
+            android:defaultValue="1" />
+
         <lineageos.preference.LineageSystemSettingSwitchPreference
             android:key="high_touch_sensitivity_enable"
             android:title="@string/high_touch_sensitivity_title"

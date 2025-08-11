@@ -245,4 +245,17 @@
         <item>17</item>
         <item>18</item>
     </string-array>
+
+    <!-- Wake on charge -->
+    <string-array name="wake_on_charge_entries" translatable="false">
+        <item>@string/wake_on_charge_disabled</item>
+        <item>@string/wake_on_charge_enabled</item>
+        <item>@string/wake_on_charge_pulse_doze</item>
+    </string-array>
+
+    <string-array name="wake_on_charge_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
 </resources>
