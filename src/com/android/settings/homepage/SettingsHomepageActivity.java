@@ -498,6 +498,7 @@ public class SettingsHomepageActivity extends FragmentActivity implements
                 getLifecycle().addObserver(new AvatarViewMixin(this, avatarTwoPaneView));
             }
         }
+    }
 
     private void showBottomSheetDialog() {
         final BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(this, R.style.MistBottomSheetDialogTheme);
@@ -555,8 +556,8 @@ public class SettingsHomepageActivity extends FragmentActivity implements
             @Override
             public void onClick(View v) {
                 Intent nIntent = new Intent(Intent.ACTION_MAIN);
-                nIntent.setClassName("com.android.settings",
-                        "com.android.settings.Settings$UpdaterActivity");
+                nIntent.setClassName("org.mist.updater",
+                        "org.mist.updater.UpdatesActivity");
                 startActivity(nIntent);
             }
         });

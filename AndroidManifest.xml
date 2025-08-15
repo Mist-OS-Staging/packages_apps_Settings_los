@@ -5752,6 +5752,7 @@
                 android:value="com.android.settings.security.ContentProtectionPreferenceFragment"/>
             <meta-data android:name="com.android.settings.HIGHLIGHT_MENU_KEY"
                 android:value="@string/menu_key_system"/>
+        </activity>
 
         <!-- Mistify -->
         <activity android:name="Settings$MistSettingsActivity"
