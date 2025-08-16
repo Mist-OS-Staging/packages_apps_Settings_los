@@ -219,6 +219,8 @@ import com.android.settings.wifi.p2p.WifiP2pSettings;
 import com.android.settings.wifi.savedaccesspoints2.SavedAccessPointsWifiSettings2;
 import com.android.settings.wifi.tether.WifiTetherSettings;
 
+import org.mist.settings.MistSettings;
+
 public class SettingsGateway {
 
     /**
@@ -362,6 +364,7 @@ public class SettingsGateway {
             ManageDomainUrls.class.getName(),
             AutomaticStorageManagerSettings.class.getName(),
             StorageDashboardFragment.class.getName(),
+            MistSettings.class.getName(),
             SystemDashboardFragment.class.getName(),
             NetworkDashboardFragment.class.getName(),
             ConnectedDeviceDashboardFragment.class.getName(),
@@ -431,6 +434,7 @@ public class SettingsGateway {
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
             // Home page
+            Settings.MistSettingsActivity.class.getName(),
             Settings.NetworkDashboardActivity.class.getName(),
             Settings.ConnectedDeviceDashboardActivity.class.getName(),
             Settings.AppDashboardActivity.class.getName(),

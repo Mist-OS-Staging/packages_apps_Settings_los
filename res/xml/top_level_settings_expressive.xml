@@ -21,7 +21,7 @@
     android:key="top_level_settings">
 
     <PreferenceCategory
-        android:order="-140"
+        android:order="-150"
         android:key="top_level_account_category"
         android:layout="@layout/settingslib_preference_category_no_title">
     </PreferenceCategory>
