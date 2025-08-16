@@ -54,7 +54,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import org.lunaris.settings.utils.DeviceUtils;
+import org.mist.settings.utils.DeviceUtils;
 
 @SearchIndexable
 public class SoundSettings extends DashboardFragment implements OnActivityResultListener {
