@@ -74,6 +74,7 @@
                 app:tabIconTint="@*android:color/accent_device_default"
                 app:tabTextColor="?android:attr/textColorSecondary"
                 app:tabInlineLabel="true" />
+
         </LinearLayout>
 
         </androidx.cardview.widget.CardView>
