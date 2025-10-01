@@ -842,7 +842,7 @@
                 android:configChanges="orientation|keyboardHidden|screenSize"
                 android:exported="true"
                 android:clearTaskOnLaunch="true"
-                android:theme="@style/Theme.SubSettingsBase">
+                android:theme="@style/Theme.SubSettingsBase.Expressive">
             <intent-filter>
                 <action android:name="android.bluetooth.devicepicker.action.LAUNCH" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -5759,6 +5759,7 @@
         <!-- Mistify -->
         <activity android:name="Settings$MistSettingsActivity"
                   android:label="@string/mist_dashboard_title"
+                  android:theme="@style/Theme.SubSettingsBase.Expressive"
                   android:exported="true">
             <intent-filter android:priority="1">
                 <action android:name="org.mist.settings.MistSettings" />
@@ -5825,7 +5826,7 @@
         <!-- Provide direct entry into Dev settings - Running Services -->
         <activity android:name="Settings$DevRunningServicesActivity"
                 android:label="@string/runningservices_settings_title"
-                android:theme="@style/Theme.SubSettingsBase"
+                android:theme="@style/Theme.SubSettingsBase.Expressive"
                 android:enabled="true"
                 android:exported="true"
                 android:excludeFromRecents="true"
