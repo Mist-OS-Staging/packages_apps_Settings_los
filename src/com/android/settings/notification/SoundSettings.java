@@ -36,7 +36,7 @@ import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 
-import com.android.internal.util.evolution.Utils;
+import com.android.internal.util.mist.Utils;
 
 import com.android.settings.R;
 import com.android.settings.RingtonePreference;
@@ -56,11 +56,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-<<<<<<< HEAD
-import org.mist.settings.utils.DeviceUtils;
-
-=======
->>>>>>> ce43e5fc864 (Settings: Use global checks for Pixels [2/3])
 @SearchIndexable
 public class SoundSettings extends DashboardFragment implements OnActivityResultListener {
     private static final String TAG = "SoundSettings";
