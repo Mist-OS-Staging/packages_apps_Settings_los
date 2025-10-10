@@ -111,6 +111,7 @@ public class HyperPreference extends BasePreferenceController implements View.On
         ProgressBar romProgressBar = holder.findViewById(R.id.rom_progress_bar);
         ImageView statusChip = holder.findViewById(R.id.status_chip);
         TextView buildTypeText = holder.findViewById(R.id.mist_build_type);
+        TextView buildNumber = holder.findViewById(R.id.build_number);
         RelativeLayout androidBarInfo = holder.findViewById(R.id.android_bar_info);
 
     	display.setText(phoneData.getDisplay());
@@ -124,6 +125,9 @@ public class HyperPreference extends BasePreferenceController implements View.On
     	kernel.setText(DeviceInfoUtils.getFormattedKernelVersion(context));
     	setInfo("ro.mistos.maintainer", maintainer);
     	
+        String buildNumberText = SystemProperties.get("ro.build.display.id", "X.X.X");
+        buildNumber.settext(buildNumberText);
+
     	String buildDateText = SystemProperties.get("ro.build.date", "X.X.X");
     	buildDate.setText(buildDateText);
 
