@@ -126,7 +126,7 @@ public class HyperPreference extends BasePreferenceController implements View.On
     	setInfo("ro.mistos.maintainer", maintainer);
     	
         String buildNumberText = SystemProperties.get("ro.build.display.id", "X.X.X");
-        buildNumber.settext(buildNumberText);
+        buildNumber.setText(buildNumberText);
 
     	String buildDateText = SystemProperties.get("ro.build.date", "X.X.X");
     	buildDate.setText(buildDateText);
@@ -224,7 +224,42 @@ public class HyperPreference extends BasePreferenceController implements View.On
     
     public class SystemInfoUtils {
 
-    	public static void setDeviceName(TextView deviceTextView) {
+        public static void setDeviceName(TextView deviceTextView) {
+    String modelName = SystemProperties.get("ro.product.model");
+    String mistDevice = SystemProperties.get("ro.mist.device");
+    String userDeviceName = SystemProperties.get("ro.mist.device.name"); // User configurable
+
+    SpannableStringBuilder builder = new SpannableStringBuilder();
+
+    // Main device name
+    String mainName = !TextUtils.isEmpty(userDeviceName) ? userDeviceName
+                      : !TextUtils.isEmpty(SystemProperties.get("ro.product.marketname")) ? SystemProperties.get("ro.product.marketname")
+                      : modelName;
+
+    if (!TextUtils.isEmpty(mainName)) {
+        SpannableString nameText = new SpannableString(mainName + "\n");
+        nameText.setSpan(new AbsoluteSizeSpan(21, true), 0, nameText.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        builder.append(nameText);
+    }
+
+    // Mist device codename
+    if (!TextUtils.isEmpty(mistDevice)) {
+        SpannableString mistDeviceText = new SpannableString("(" + mistDevice + ")\n");
+        mistDeviceText.setSpan(new AbsoluteSizeSpan(15, true), 0, mistDeviceText.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        builder.append(mistDeviceText);
+    }
+
+    // Model number
+    if (!TextUtils.isEmpty(modelName)) {
+        SpannableString modelText = new SpannableString("(" + modelName + ")");
+        modelText.setSpan(new AbsoluteSizeSpan(13, true), 0, modelText.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        builder.append(modelText);
+    }
+
+    deviceTextView.setText(builder);
+  }
+
+/*    	public static void setDeviceName(TextView deviceTextView) {
     	    String modelName = SystemProperties.get("ro.product.model");
     	    String marketName = SystemProperties.get("ro.product.marketname");
     	    String mistDevice = SystemProperties.get("ro.mist.device");
@@ -246,7 +281,7 @@ public class HyperPreference extends BasePreferenceController implements View.On
     	    }
     	    deviceTextView.setText(builder);
     	}
-
+*/
     	public static StorageInfo getStorageInfo(Context context) {
     	    StorageManager storageManager = (StorageManager) context.getSystemService(Context.STORAGE_SERVICE);
     	    StorageManagerVolumeProvider volumeProvider = new StorageManagerVolumeProvider(storageManager);
