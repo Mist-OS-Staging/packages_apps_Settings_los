@@ -23,6 +23,8 @@ import static android.provider.Settings.EXTRA_SETTINGS_EMBEDDED_DEEP_LINK_INTENT
 import static com.android.settings.SettingsActivity.EXTRA_IS_DEEPLINK_HOME_STARTED_FROM_SEARCH;
 import static com.android.settings.SettingsActivity.EXTRA_USER_HANDLE;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import android.animation.LayoutTransition;
 import android.app.ActivityManager;
 import android.app.settings.SettingsEnums;
@@ -55,6 +57,9 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.Toolbar;
 
+import androidx.viewpager.widget.ViewPager;
+import com.google.android.material.tabs.TabLayout;
+
 import android.widget.TextView;
 import android.widget.Button;
 import android.graphics.drawable.Drawable;
@@ -72,10 +77,16 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.window.embedding.SplitController;
 import androidx.window.embedding.SplitInfo;
 import androidx.window.embedding.SplitRule;
 import androidx.window.java.embedding.SplitControllerCallbackAdapter;
+
+// Mistify Packages
+import com.crdroid.settings.crDroidSettingsLayout;
+import com.crdroid.settings.utils.*;
+import com.crdroid.settings.preferences.*;
 
 import com.airbnb.lottie.LottieAnimationView;
 
@@ -100,6 +111,7 @@ import com.google.android.setupcompat.util.WizardManagerHelper;
 import java.net.URISyntaxException;
 import java.util.List;
 import java.util.Set;
+import java.util.ArrayList;
 
 /** Settings homepage activity */
 public class SettingsHomepageActivity extends FragmentActivity implements
@@ -131,6 +143,9 @@ public class SettingsHomepageActivity extends FragmentActivity implements
     private Set<HomepageLoadedListener> mLoadedListeners;
     private boolean mIsEmbeddingActivityEnabled;
     private boolean mIsTwoPane;
+    private TabLayout mTabLayout;
+    private ViewPager mViewPager;
+
     // A regular layout shows icons on homepage, whereas a simplified layout doesn't.
     private boolean mIsRegularLayout = true;
 
@@ -302,16 +317,8 @@ public class SettingsHomepageActivity extends FragmentActivity implements
             if (!Flags.updatedSuggestionCardAosp()
                     && FeatureFlagUtils.isEnabled(this, FeatureFlags.CONTEXTUAL_HOME)) {
                 showFragment(() -> new ContextualCardsFragment(), R.id.contextual_cards_content);
-                ((FrameLayout) findViewById(R.id.main_content))
-                        .getLayoutTransition().enableTransitionType(LayoutTransition.CHANGING);
             }
         }
-        mMainFragment = showFragment(() -> {
-            final TopLevelSettings fragment = new TopLevelSettings();
-            fragment.getArguments().putString(SettingsActivity.EXTRA_FRAGMENT_ARG_KEY,
-                    highlightMenuKey);
-            return fragment;
-        }, R.id.main_content);
 
         // Launch the intent from deep link for large screen devices.
         if (shouldLaunchDeepLinkIntentToRight()) {
@@ -366,7 +373,7 @@ public class SettingsHomepageActivity extends FragmentActivity implements
         // When it's large screen 2-pane and Settings app is in the background, receiving an Intent
         // will not recreate this activity. Update the intent for this case.
         setIntent(intent);
-        reloadHighlightMenuKey();
+        // reloadHighlightMenuKey();
         if (isFinishing()) {
             return;
         }
@@ -887,17 +894,21 @@ public class SettingsHomepageActivity extends FragmentActivity implements
         return menuKey;
     }
 
-    private void reloadHighlightMenuKey() {
-        mMainFragment.getArguments().putString(SettingsActivity.EXTRA_FRAGMENT_ARG_KEY,
-                getHighlightMenuKey());
-        mMainFragment.reloadHighlightMenuKey();
-    }
+    //private void reloadHighlightMenuKey() {
+    //    mMainFragment.getArguments().putString(SettingsActivity.EXTRA_FRAGMENT_ARG_KEY,
+    //            getHighlightMenuKey());
+    //    mMainFragment.reloadHighlightMenuKey();
+    //}
 
     private void initHomepageContainer() {
-        final View view = findViewById(R.id.homepage_container);
-        // Prevent inner RecyclerView gets focus and invokes scrolling.
-        view.setFocusableInTouchMode(true);
-        view.requestFocus();
+        mTabLayout = findViewById(R.id.tab_layout);
+        mViewPager = findViewById(R.id.viewPager);
+
+        mTabLayout.setupWithViewPager(mViewPager);
+        ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+        viewPagerAdapter.addFragment(new TopLevelSettings(), "Device Settings");
+        viewPagerAdapter.addFragment(new crDroidSettingsLayout(), "Mistify");
+        mViewPager.setAdapter(viewPagerAdapter);
 
         if (Flags.extendedScreenshotsExcludeNestedScrollables()) {
             // Force scroll capture to select the NestedScrollView, instead of the non-scrollable
@@ -998,6 +1009,38 @@ public class SettingsHomepageActivity extends FragmentActivity implements
                 mIsSplitUpdatedUI = true;
                 mActivity.updateHomepageUI();
             }
+        }
+    }
+
+    static class ViewPagerAdapter extends FragmentPagerAdapter {
+
+        private final ArrayList<Fragment> fragmentArrayList = new ArrayList<>();
+        private final ArrayList<String> fragmentTitle = new ArrayList<>();
+
+        public ViewPagerAdapter(@NonNull FragmentManager fm, int behavior) {
+            super(fm, behavior);
+        }
+
+        @NonNull
+        @Override
+        public Fragment getItem(int position) {
+            return fragmentArrayList.get(position);
+        }
+
+        @Override
+        public int getCount() {
+            return fragmentArrayList.size();
+        }
+
+        public void addFragment(Fragment fragment, String title){
+            fragmentArrayList.add(fragment);
+            fragmentTitle.add(title);
+        }
+
+        @Nullable
+        @Override
+        public CharSequence getPageTitle(int position) {
+            return fragmentTitle.get(position);
         }
     }
 }
