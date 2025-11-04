@@ -220,7 +220,7 @@ class HideDeveloperStatusSettings: Fragment(R.layout.hide_developer_status_layou
                 !it.applicationInfo!!.isSystemApp()
                 && !resources.getStringArray(
                         R.array.hide_developer_status_hidden_apps)
-                            .asList().contains(it.applicationInfo.packageName)
+                            .asList().contains(it.applicationInfo!!.packageName)
                 && !it.applicationInfo!!.packageName.contains("android.settings")
             } else {
                 !resources.getStringArray(
